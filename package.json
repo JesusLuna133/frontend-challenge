@@ -10,12 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@coreui/coreui": "^5.4.3",
+    "@coreui/coreui-pro": "^3.2.0",
+    "@coreui/react": "^5.9.0",
+    "@coreui/react-pro": "^5.22.0",
     "@tailwindcss/vite": "^4.1.13",
     "ag-grid-react": "^34.2.0",
+    "formik": "^2.4.6",
     "motion": "^12.23.21",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "versions": "^13.1.2",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
