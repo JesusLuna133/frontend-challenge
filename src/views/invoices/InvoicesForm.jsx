@@ -21,6 +21,7 @@ const InvoicesForm = ({ addNewInvoice, onClose }) => {
       validateOnBlur: false,
       validateOnChange: false,
     });
+
   return (
     <CForm
       onSubmit={handleSubmit}
@@ -29,16 +30,14 @@ const InvoicesForm = ({ addNewInvoice, onClose }) => {
       <div>
         <label className="block text-sm font-medium text-gray-700">Name</label>
         <CFormInput
-          className="py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+          className="w-full px-1 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           type="text"
           name="client_name"
           value={values.client_name}
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        {errors.client_name ? (
-          <div className="text-sm text-red-600">{errors.client_name}</div>
-        ) : null}
+        {errors.client_name ? (<div className="text-sm text-red-600">{errors.client_name}</div>) : null}
       </div>
 
       <div className="mt-4">
@@ -47,6 +46,7 @@ const InvoicesForm = ({ addNewInvoice, onClose }) => {
         </label>
         <div>
           <input
+            className="w-full px-1 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             type="date"
             locale="en-US"
             name="date"
@@ -55,9 +55,7 @@ const InvoicesForm = ({ addNewInvoice, onClose }) => {
             onBlur={handleBlur}
           />
         </div>
-        {errors.date ? (
-          <div className="text-sm text-red-600">{errors.date}</div>
-        ) : null}
+        {errors.date ? (<div className="text-sm text-red-600">{errors.date}</div>) : null}
       </div>
 
       <div className="mt-4">
@@ -65,17 +63,15 @@ const InvoicesForm = ({ addNewInvoice, onClose }) => {
           Amount
         </label>
         <CFormInput
-          className="py-1 no-arrows border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+          className="w-full py-1 px-1 no-arrows border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           type="number"
-          placeholder="0"
+          placeholder="$0.00"
           name="amount"
           value={values.amount}
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        {errors.amount ? (
-          <div className="text-sm text-red-600">{errors.amount}</div>
-        ) : null}
+        {errors.amount ? (<div className="text-sm text-red-600">{errors.amount}</div>) : null}
       </div>
 
       <div className="mt-4">
@@ -83,7 +79,7 @@ const InvoicesForm = ({ addNewInvoice, onClose }) => {
           Status
         </label>
         <CFormSelect
-          className="py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+          className="w-full py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           name="status"
           value={values.status}
           onChange={handleChange}
@@ -94,15 +90,13 @@ const InvoicesForm = ({ addNewInvoice, onClose }) => {
             { label: "Unpaid", value: "2" },
           ]}
         />
-        {errors.status ? (
-          <div className="text-sm text-red-600">{errors.status}</div>
-        ) : null}
+        {errors.status ? (<div className="text-sm text-red-600">{errors.status}</div>) : null}
       </div>
 
       <div className="flex justify-end mt-5">
         <button
           type="submit"
-          className="text-white bg-sky-500 py-1 px-2 hover:bg-sky-300 rounded hover:cursor-pointer"
+          className="text-white bg-sky-600 py-1 px-2 hover:bg-sky-400 rounded hover:cursor-pointer"
         >
           Add Invoice
         </button>

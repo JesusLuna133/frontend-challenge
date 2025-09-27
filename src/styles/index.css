@@ -1,20 +1,26 @@
 @import "tailwindcss";
 
+/*Removes arrows from number imput*/
 .no-arrows::-webkit-outer-spin-button,
 .no-arrows::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
+/*Ag grid customization of header*/
+.ag-theme-quartz .ag-header {
+  font-weight: normal;
+  font-size: 16px;
+  background-color: rgb(189, 189, 189);
+}
+
+/*Ag Grid customization of theme*/
 .ag-theme-quartz {
-  background: red; /* TEMP: for debugging */
-  --ag-background-color: #2c5883;
-  --ag-odd-row-background-color: #3c1b1b;
-  --ag-even-row-background-color: #080b13;
-  --ag-header-background-color: #6e89c0;
+  --ag-odd-row-background-color: #e7e7e7;
   --ag-font-size: 14px;
   --ag-border-color: #d1d5db;
 }
