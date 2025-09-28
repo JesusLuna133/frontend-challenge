@@ -17,7 +17,7 @@ localStorage was used for the Initial data (mock data) of the AG Grid.
 Instalations needed (versions are those in which the project was developed):
 * Node.js version 24.5.0 and npm.
 
-### Instalation
+### Installation
 To set the project locally:
 1. Clone the repository (git clone)
 2. Go to the project directory (cd directory)
