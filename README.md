@@ -16,13 +16,13 @@ localStorage was used for the Initial data (mock data) of the AG Grid.
 ### Prerequisites 
 Instalations needed (versions are those in which the project was developed):
 * Node.js version 24.5.0 and npm.
-
+* Git
+  
 ### Installation
 To set the project locally:
-1. Clone the repository (git clone)
-2. Go to the project directory (cd directory)
+1. Clone the repository (git clone https://github.com/JesusLuna133/frontend-challenge.git)
+2. Go to the project directory (cd front-developer-challenge)
 3. Install dependencies (npm install)
 
 ## **Live demo link (Vercel)** 
-frontend-challenge-dtq7k590l-jesusluna133s-projects.vercel.app
-
+[Invoicing Module Vercel](https://frontend-challenge-kappa-bay.vercel.app/)
