@@ -4,11 +4,10 @@ import InvoicesGrid from "./InvoicesGrid";
 import InvoicesForm from "./InvoicesForm";
 import { TableData } from "./constants/defaultTableData";
 import { useModalStore, useStore } from "../../store";
-import FileImport from "../../components/FileImport";
 
 export default () => {
   const { showModal, setShowModal } = useModalStore();
-  const {rowData, setRowData} = useStore();
+  const { rowData, setRowData } = useStore();
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -59,8 +58,7 @@ export default () => {
       </header>
 
       <div className="flex justify-end mt-5 mr-8">
-        
-        <FileImport/>
+
         <button
           className="text-white bg-sky-600 py-1 px-2 hover:bg-sky-500 rounded hover:cursor-pointer"
           onClick={handleShowModal}>
@@ -68,15 +66,15 @@ export default () => {
         </button>
       </div>
 
-      <InvoicesGrid rowData={rowData}/>
-        <Modal
-          title={"New Invoice"}
-          size={"sm"}
-          onClose={handleCloseModal}
-          isOpen={showModal}
-        >
-          <InvoicesForm onClose={handleCloseModal} addNewInvoice={addNewInvoice}/>
-        </Modal>
+      <InvoicesGrid rowData={rowData} />
+      <Modal
+        title={"New Invoice"}
+        size={"sm"}
+        onClose={handleCloseModal}
+        isOpen={showModal}
+      >
+        <InvoicesForm onClose={handleCloseModal} addNewInvoice={addNewInvoice} />
+      </Modal>
     </div>
   );
 };

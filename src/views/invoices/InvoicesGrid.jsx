@@ -14,51 +14,51 @@ const InvoicesGrid = ({ rowData = [] }) => {
       field: "date",
       cellDataType: "date",
       filter: true,
-        valueFormatter: (params) => {
-          if (!params.value) return "";
-          const date = new Date(params.value);
-          return date.toLocaleDateString("en-US", {
-            month: "2-digit",
-            day: "2-digit",
-            year: "numeric",
-          });
-        },
-        filterParams: {
-          filterOptions: ["between"], //Only show equals filter
-        },
+      valueFormatter: (params) => {
+        if (!params.value) return "";
+        const date = new Date(params.value);
+        return date.toLocaleDateString("en-US", {
+          month: "2-digit",
+          day: "2-digit",
+          year: "numeric",
+        });
+      },
+      filterParams: {
+        filterOptions: ["between"], //Only show equals filter
+      },
     },
     {
       headerName: "Status",
       field: "status",
       filter: true,
-        valueFormatter: (params) => {
-          if (params.value === "1") return "Paid";
-          if (params.value === "2") return "Unpaid";
-          return params.value || "";
-        },
-        filterValueGetter: (params) => {
-          if (params.data.status === "1") return "Paid";
-          if (params.data.status === "2") return "Unpaid";
-          return "";
-        },
-        filterParams: {
-          values: ["Paid", "Unpaid"], // Only show these in the filter dropdown
-          filterOptions: ["equals"], // Only show "equals" filter
-        },
+      valueFormatter: (params) => {
+        if (params.value === "1") return "Paid";
+        if (params.value === "2") return "Unpaid";
+        return params.value || "";
+      },
+      filterValueGetter: (params) => {
+        if (params.data.status === "1") return "Paid";
+        if (params.data.status === "2") return "Unpaid";
+        return "";
+      },
+      filterParams: {
+        values: ["Paid", "Unpaid"], // Only show these in the filter dropdown
+        filterOptions: ["equals"], // Only show "equals" filter
+      },
     },
     {
       headerName: "Amount",
       field: "amount",
-        valueFormatter: (params) => {
-          if (!params.value) return "";
-          const amount = Number(
-            params.value.toString().replace(/[^0-9.-]+/g, "")
-          );
-          return amount.toLocaleString("en-US", {
-            style: "currency",
-            currency: "USD",
-          });
-        },
+      valueFormatter: (params) => {
+        if (!params.value) return "";
+        const amount = Number(
+          params.value.toString().replace(/[^0-9.-]+/g, "")
+        );
+        return amount.toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        });
+      },
     },
   ]);
 
